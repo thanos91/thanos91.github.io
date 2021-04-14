@@ -1,0 +1,46 @@
+I"�<p>Nowadays, everyone and their mothers are expected to know SQL. Although you as an esteemed Data Scientist think that this is not what you are paid for, you fail to recognize the data part in DS. The language to speak with data is (for the last 50 years) SQL, so reluctantly you should consider adding this to your programming arsenal. Btw you need to have a database in your sytem and some data in it. So, because you also want to join the cool guys and girls and don’t pollute your OS, it is a good idea to create the database inside a Docker Container. <a href="#Prerequisites">go there</a></p>
+
+<h1 id="objective">Objective</h1>
+<p>The objective of this post is to create and run a Docker Container with a MySQL Database configured,
+We will use that container for the subsequent tasks, in order to familiarize with the basic (and advanced) SQL syntax.</p>
+
+<p>Inspitation about the following post is drawn from</p>
+<ol>
+  <li>SQL in 10 Minutes, Sams Teach Yourself</li>
+  <li>SQL Practice Problems 57 Beginning, Intermediate, and Advanced Challenges for You to Solve Using a Learn-By-Doing Approach</li>
+  <li>SQL Cookbook Query Solutions and Techniques for All SQL Users</li>
+  <li>Learning SQL Generate, Manipulate, and Retrieve Data</li>
+  <li>The Docker book</li>
+</ol>
+
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+  <li>Basic knowledge of Docker</li>
+  <li>basic knowledge of running commands in command line</li>
+</ul>
+
+<h2 id="lets-dockerize-it">Lets dockerize it</h2>
+
+<p>Create a file named “Dockerfile” with the following
+commands in it</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># my_project_folder/DockerFile
+
+FROM mysql:
+
+ADD create.sql 
+</code></pre></div></div>
+<p>The following code snippet does 2 things:</p>
+<ol>
+  <li>
+    <p>goes to Docker Hub(the place that docker images are stored) and downloads the specific image to your pc</p>
+  </li>
+  <li>
+    <p>runs the create.sql script that creates and populates the tables in our database</p>
+  </li>
+</ol>
+
+<p>So the resulting image from this Dockerfile has a MySQL database created and populated, ready for use</p>
+
+<h3 id="spin-up-a-container">Spin up a container</h3>
+:ET

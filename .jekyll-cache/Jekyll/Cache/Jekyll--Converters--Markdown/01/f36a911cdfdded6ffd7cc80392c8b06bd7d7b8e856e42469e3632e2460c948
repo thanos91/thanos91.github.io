@@ -1,0 +1,20 @@
+I"û<p>When i started programming i thought that the only thing there was when</p>
+<h1 id="objective">Objective</h1>
+<p>Create a simple Command Line Interface App and thoroughly test it using the pytest module. 
+I intend to</p>
+<ol>
+  <li>Cover the most useful features of pytest library</li>
+  <li>Introduce basic concepts of Test Driven Development</li>
+</ol>
+
+<h2 id="yo">yo</h2>
+
+<p><img src="/assets/img/we-in-rest.jpg" alt="I and My friends" /></p>
+
+<h1 id="references">References</h1>
+<p>For the material i was inspired by the following books</p>
+<ol>
+  <li>Python Testing with pytest Simple, Rapid, Effective, and Scalable by Brian Okken</li>
+  <li>Test-Driven Development with Python: Obey the Testing Goat: Using Django, Selenium, and JavaScript</li>
+</ol>
+:ET
