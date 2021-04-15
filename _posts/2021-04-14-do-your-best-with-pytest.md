@@ -3,11 +3,13 @@ layout: post
 title: Do you best with pytest
 date: 2021-04-14 00:00:00 +0300
 # description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: insert_image.jpg # Add image post (optional)
-tags: [pytest, TinyDB, cli] # add tag
+img: pytest.png # Add image post (optional)
+tags: [Mission1, pytest, TinyDB, cli] # add tag
 toc: true
-posturl: mission1/2021-04-14-do-your-best-with-pytest
 ---
+* This will become a table of contents (this text will be scrapped).  
+{:toc}
+
 
 When i started programming i thought that the only thing there was when writing code was to handle the task at hand. Later i would organize that code into functions and classes, write some documentation about it and hopefully whenever i needed to change something i could catch up really quickly.
 
@@ -30,7 +32,7 @@ I intend to
 1. Cover the most useful features of pytest library
 2. Introduce basic concepts of Test Driven Development
 
-## The App
+# The App
 We will create an command line interface app that  a teacher would use to grade the students taking his lecture. Of course you can create the same functionality in other ways, but we wanted a relatively simple app as a test bed for the creation of our tests.
 
 We want to create the following basic functionality with this app
@@ -45,19 +47,10 @@ We want to create the following basic functionality with this app
 The finished Grades app can be found [here](https://github.com/thanos91/grades)
 
 
-see [Name of Link]({% post_url 2017-09-12-the-best-organizer-software %})
-
-{% capture img_folder %}
-{{ "/assets/img/" | prepend: site.baseurl | append : page.posturl}}
-{% endcapture %}
-
-
-
-
-## The Database
+# The Database
 For the purposes of this post and because we want to focus on the testing side of things , we will use a simple database called TinyDB (which is basically a json file). Json files are a data format that allows passing information between different processes or applications. A json file looks a lot like a python dictionary and python dictionaries can be serialised to json format. A json looks like this
 
-<img src="{{ img_folder }}/example_json.png" width="200" align="center">  
+<img src="{{ site.baseurl }}/assets/img/example_json.png" width="200" align="center"> 
 
 The basic functions that are available to us from TinyDB (this is called TinyDB's API) are
 ```python
@@ -97,24 +90,18 @@ table.truncate()    # remove all documents in 'Exams' table
 db.remove(query)    # remove all documents 
 ```
 
-## Dive into the project
+# Dive into the project
 
-### Setting Up
+## Setting Up
 
 You could clone the final project in a folder and just run the tests, but this is no fun, so i strongly recommend to follow my pace and write it from scratch. 
 
 First things first go to a folder of your choice and create the folders and files that are shown under first image
 
-
-{% capture url %}
-{{site.baseurl}}/assets/img/mission1/2021-04-14-do-your-best-with-pytest/initial_structure.png
-{% endcapture %}
+{% capture url %}{{ site.baseurl }}/assets/img/initial_structure.png{% endcapture %}
 {% include image.html url=url description="(a) Initial Project Structure" %}
 
-
-{% capture url %}
-{{site.baseurl}}/assets/img/mission1/2021-04-14-do-your-best-with-pytest/after_venv.png
-{% endcapture %}
+{% capture url %}{{ site.baseurl }}/assets/img/after_venv.png{% endcapture %}
 {% include image.html url=url description="(b) After venv creation" %}
 
 
@@ -171,7 +158,7 @@ hi()
 # Hi
 ```
 
-More info about virtual envs and their usefulness can be found [here]({% post_url mission1/2021-04-14-virtualenv %}). What is packaging and how the import works can be found [here]({% post_url mission1/2021-04-14-packaging %}). Οσο μιλάω εσείς παραγγέλνετε
+More info about virtual envs and their usefulness can be found [here]({% post_url 2021-04-14-virtualenv %}). What is packaging and how the import works can be found [here]({% post_url 2021-04-14-packaging %}). Οσο μιλάω εσείς παραγγέλνετε
 
 ### Write our first test
 

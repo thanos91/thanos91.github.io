@@ -11,7 +11,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Thanos Tasakos # add your name
 author-img: profile.jpeg # add your photo
-about-author: Former PH Engineer <br> Current ML Engineer  # add description
+about-author: Data Scientist / ML Engineer <br>  # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: thanos91 # add your Github handle
@@ -31,9 +31,10 @@ plugins:
   - jekyll-paginate
   - jemoji
   - jekyll-spaceship
-  - jekyll-toc
 
 paginate: 8
 paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+include:
+  - static
