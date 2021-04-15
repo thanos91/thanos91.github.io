@@ -1,5 +1,6 @@
 ---
 layout: main
+toc: true
 ---
 <article class="article-page">
   <div class="page-content">
@@ -19,7 +20,15 @@ layout: main
         <h1 class="page-title">{{page.title}}</h1>
         <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      {{content | markdownify}}
+      <div>
+        <div id="table-of-contents">
+          {% toc %}
+        </div>
+        <div id="markdown-content">
+          {{ content | markdownify}}
+        </div>
+      </div>
+      <!-- {{content | markdownify }} -->
       <div class="page-footer">
         <div class="page-share">
           <!-- <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
