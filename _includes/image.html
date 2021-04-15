@@ -1,0 +1,19 @@
+
+<style>
+    figure {
+    display: inline-block;
+    margin: 20px; /* adjust as needed */
+    }
+    figure img {
+        vertical-align: top;
+    }
+    figure figcaption {
+        text-align: center;
+    }
+</style>
+
+
+<figure class="image">
+    <img src="{{ include.url }}" alt="{{ include.description }}" width="200">
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
