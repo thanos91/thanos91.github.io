@@ -1,0 +1,18 @@
+
+<style>
+    figure {
+    display: block;
+    margin-left: auto; /* adjust as needed */
+    margin-right: auto
+    }
+    
+    figure figcaption {
+        text-align: center;
+    }
+</style>
+
+
+<figure class="centered_image">
+    <img src="{{ include.url }}" alt="{{ include.description }}" width="200">
+    <figcaption>{{ include.description }}</figcaption>
+</figure>
